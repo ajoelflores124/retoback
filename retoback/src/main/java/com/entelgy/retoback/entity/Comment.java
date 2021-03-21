@@ -4,15 +4,25 @@ import java.io.Serializable;
 
 public class Comment implements Serializable {
 	
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
 	private long postID;
     private long id;
     private String name;
     private String email;
     private String body;
+    
+    public Comment() {
+    	
+    }
+    
+    public Comment(long postID,long id,String name,String email,String body) {
+    	this.postID = postID;
+    	this.id = id;
+    	this.name = name;
+    	this.email = email;
+    	this.body = body;
+    }
+    
+    
     
 	public long getPostID() {
 		return postID;
@@ -46,6 +56,9 @@ public class Comment implements Serializable {
 	}
     
     
-    
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 
 }
